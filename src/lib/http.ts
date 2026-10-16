@@ -12,7 +12,7 @@ export type FetchedPage = {
 
 export function hostnameKey(url: string): string {
   try {
-    return new URL(url).hostname.replace(/^www./, "").toLowerCase();
+    return new URL(url).hostname.replace(/^www\\./, "").toLowerCase();
   } catch {
     return "";
   }
